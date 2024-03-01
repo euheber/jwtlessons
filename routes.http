@@ -1,0 +1,12 @@
+GET http://localhost:3000/api/v1/dashboard
+Content-Type:  application/json
+Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsInVzZXJuYW1lIjoiaGViZXIiLCJpYXQiOjE3MDkxMzc0OTYsImV4cCI6MTcxMTcyOTQ5Nn0.euojYRiJiu0xJzncGKxJvzl0aLiOkRTfPdUA7qBjigo
+###
+
+POST http://localhost:3000/api/v1/login
+Content-Type:  application/json
+
+{
+    "username": "heber",
+    "password": "123"
+}
