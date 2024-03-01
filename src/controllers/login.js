@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken")
-const CustomAPIError = require("../errors/customErrors")
+const { BadRequerestError } = require("../errors/index")
 
 
 const login = async (req, res) => {
@@ -9,7 +9,7 @@ const login = async (req, res) => {
     const token = jwt.sign({ id, username }, process.env.JWT_SECRET, { expiresIn: '30d' })
     res.status(200).json({ msg: 'usuário criado', token })
   } else {
-    throw new CustomAPIError('Você precisa preencher ambos os campos', 400)
+    throw new BadRequerestError('Você precisa preencher ambos os campos')
   }
 }
 
